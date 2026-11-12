@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-11-11T23:42:14.690Z",
+  "note": "Computed by the engine at build time (not hard-coded in the UI).",
+  "scenarios": [
+    {
+      "id": "S0",
+      "file": "S0_existing.json",
+      "demand_hl": 155,
+      "delivered_hl": 155,
+      "on_time_hl": 155,
+      "service_level": 1,
+      "orders_complete_on_time": "7/7",
+      "final_backlog_hl": 0
+    },
+    {
+      "id": "S1",
+      "file": "S1_new_order.json",
+      "demand_hl": 195,
+      "delivered_hl": 195,
+      "on_time_hl": 180,
+      "service_level": 0.9230769230769231,
+      "orders_complete_on_time": "6/8",
+      "final_backlog_hl": 0
+    },
+    {
+      "id": "S2",
+      "file": "S2_packaging_x2.json",
+      "demand_hl": 195,
+      "delivered_hl": 195,
+      "on_time_hl": 180,
+      "service_level": 0.9230769230769231,
+      "orders_complete_on_time": "6/8",
+      "final_backlog_hl": 0
+    },
+    {
+      "id": "S3",
+      "file": "S3_extra_tank.json",
+      "demand_hl": 195,
+      "delivered_hl": 195,
+      "on_time_hl": 190,
+      "service_level": 0.9743589743589743,
+      "orders_complete_on_time": "7/8",
+      "final_backlog_hl": 0
+    },
+    {
+      "id": "S4",
+      "file": "S4_demand_plus30.json",
+      "demand_hl": 201.5,
+      "delivered_hl": 201.5,
+      "on_time_hl": 167.5,
+      "service_level": 0.8312655086848635,
+      "orders_complete_on_time": "5/7",
+      "final_backlog_hl": 0
+    },
+    {
+      "id": "S5",
+      "file": "S5_tank_unavailable.json",
+      "demand_hl": 155,
+      "delivered_hl": 155,
+      "on_time_hl": 145,
+      "service_level": 0.9354838709677419,
+      "orders_complete_on_time": "5/7",
+      "final_backlog_hl": 0
+    }
+  ]
+}

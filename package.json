@@ -1,0 +1,47 @@
+{
+  "name": "brewery-control-room-3d",
+  "private": true,
+  "version": "1.0.0",
+  "description": "BeerAI \u2014 Brewery Control Room 3D: didactic brewery digital twin with a pure TypeScript simulation engine (synthetic data).",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "build:app": "vite build",
+    "build:fallback": "node scripts/build-fallback.mjs",
+    "build:scenarios": "node scripts/export-scenarios.mjs",
+    "build": "npm run typecheck && npm run build:app && npm run build:fallback && npm run build:scenarios",
+    "start": "node scripts/serve.mjs --root dist --port 4173 --open",
+    "serve": "node scripts/serve.mjs --root dist --port 4173",
+    "test:e2e": "node tests/e2e/smoke.mjs",
+    "package:stable": "node scripts/package-stable.mjs",
+    "verify": "npm run test && npm run build && npm run test:e2e",
+    "tour": "node tests/e2e/tour.mjs"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "5.3.0",
+    "@fontsource/roboto-mono": "5.3.0",
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.186.1",
+    "zustand": "5.0.16"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "esbuild": "0.28.2",
+    "playwright-core": "1.64.1",
+    "typescript": "5.9.3",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

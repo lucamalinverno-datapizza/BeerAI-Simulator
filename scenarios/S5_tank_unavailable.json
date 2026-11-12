@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S5",
+  "name": "F4 unavailable days 0–21",
+  "synthetic_data": true,
+  "description": "S0 with tank F4 unavailable in [0, 21); nothing else changes.",
+  "based_on": "S0",
+  "horizon_day": 42,
+  "batch_volume_hl": 20,
+  "max_batches_per_day": 1,
+  "packaging_capacity_hl_per_day": 30,
+  "cleaning_days": 1,
+  "products": [
+    {
+      "id": "A",
+      "name": "Beer A",
+      "residence_days": 14
+    },
+    {
+      "id": "B",
+      "name": "Beer B",
+      "residence_days": 21
+    }
+  ],
+  "tanks": [
+    {
+      "id": "F1",
+      "capacity_hl": 20,
+      "unavailable": []
+    },
+    {
+      "id": "F2",
+      "capacity_hl": 20,
+      "unavailable": []
+    },
+    {
+      "id": "F3",
+      "capacity_hl": 20,
+      "unavailable": []
+    },
+    {
+      "id": "F4",
+      "capacity_hl": 20,
+      "unavailable": [
+        {
+          "start_day": 0,
+          "end_day": 21,
+          "note": "Planned maintenance"
+        }
+      ]
+    }
+  ],
+  "initial_finished_stock_hl": {
+    "A": 10,
+    "B": 5
+  },
+  "initial_wip": [
+    {
+      "id": "I1",
+      "tank_id": "F1",
+      "product_id": "A",
+      "volume_hl": 20,
+      "ready_day": 3
+    },
+    {
+      "id": "I2",
+      "tank_id": "F2",
+      "product_id": "A",
+      "volume_hl": 20,
+      "ready_day": 7
+    },
+    {
+      "id": "I3",
+      "tank_id": "F3",
+      "product_id": "B",
+      "volume_hl": 20,
+      "ready_day": 5
+    }
+  ],
+  "orders": [
+    {
+      "id": "O01",
+      "customer": "North pub",
+      "product_id": "A",
+      "quantity_hl": 20,
+      "due_day": 7
+    },
+    {
+      "id": "O02",
+      "customer": "City pub",
+      "product_id": "B",
+      "quantity_hl": 15,
+      "due_day": 10
+    },
+    {
+      "id": "O03",
+      "customer": "Lake distributor",
+      "product_id": "A",
+      "quantity_hl": 30,
+      "due_day": 14
+    },
+    {
+      "id": "O04",
+      "customer": "Station pub",
+      "product_id": "B",
+      "quantity_hl": 15,
+      "due_day": 21
+    },
+    {
+      "id": "O05",
+      "customer": "West distributor",
+      "product_id": "A",
+      "quantity_hl": 30,
+      "due_day": 28
+    },
+    {
+      "id": "O06",
+      "customer": "Market hall",
+      "product_id": "B",
+      "quantity_hl": 20,
+      "due_day": 35
+    },
+    {
+      "id": "O07",
+      "customer": "South pub",
+      "product_id": "A",
+      "quantity_hl": 25,
+      "due_day": 42
+    }
+  ]
+}
