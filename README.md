@@ -138,3 +138,7 @@ This repository includes editable source, tests, the compiled 3D application, a 
 fallback, synthetic scenarios, and the operating guide. Download the release ZIP and extract it
 before launching. Scenario edits saved in the presenter's browser are local and are not part
 of this package; the supplied reference scenarios are S0–S5.
+
+## Screenshots
+
+[Browse all 36 test and tour screenshots](test-results/README.md). Only PNG captures are shared; local logs and JSON test reports are excluded.
